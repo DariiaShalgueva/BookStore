@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <style>
+
+.books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .book-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .book-card h3 {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .book-card p {
+            font-size: 0.9em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .books-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .books-slider .book-card {
+            flex: 0 0 auto;
+            width: 180px;
+        }
+    </style>
+    <header>
+        <h1>Интернет-магазин книг</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/cart.html">Корзина</a>
+            <span id="auth-links">
+                <a href="/login.html">Войти</a>
+            </span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>Добро пожаловать в наш интернет-магазин книг!</h2>
+            <p>Широкий выбор книг на любой вкус и возраст. Быстрая доставка и выгодные цены.</p>
+            <a href="/catalog.html" class="cta-button">Перейти в каталог</a>
+        </section>
+
+        <section class="featured-books">
+            <h2>Популярные книги</h2>
+            <div class="books-slider">
+            </div>
+        </section>
+
+        <section class="promotions">
+            <h2>Акции и скидки</h2>
+            <div class="promotion-item">
+                <h3>Скидка 20% на все книги в жанре "Фантастика"</h3>
+                <p>Акция действует до конца месяца. Не упустите свой шанс!</p>
+            </div>
+            <div class="promotion-item">
+                <h3>Бесплатная доставка при заказе от 1000 рублей</h3>
+                <p>Доставка по всей России. Подробности на странице оформления заказа.</p>
+            </div>
+        </section>
+
+        <section class="recommendations">
+            <h2>Рекомендуемые книги</h2>
+            <div class="books-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Интернет-магазин книг. Все права защищены.</p>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

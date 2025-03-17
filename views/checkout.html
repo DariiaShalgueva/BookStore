@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Интернет-магазин книг</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/cart.html">Корзина</a>
+            <span id="auth-links">
+                <a href="/login.html">Войти</a>
+            </span>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h2>Оформление заказа</h2>
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-section">
+                    <h3>Информация о доставке</h3>
+                    <div class="form-group">
+                        <label for="shipping-method">Способ доставки:</label>
+                        <select id="shipping-method" name="shipping_method" required>
+                            <option value="pickup">Самовывоз</option>
+                            <option value="courier">Курьерская доставка</option>
+                            <option value="postal">Почтовая доставка</option>
+                        </select>
+                    </div>
+
+                    <div id="address-fields" class="form-group">
+                        <label for="address">Адрес доставки:</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Способ оплаты</h3>
+                    <div class="form-group">
+                        <label for="payment-method">Способ оплаты:</label>
+                        <select id="payment-method" name="payment_method" required>
+                            <option value="credit_card">Кредитная карта</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank_transfer">Банковский перевод</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="submit-button">Подтвердить заказ</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Интернет-магазин книг. Все права защищены.</p>
+    </footer>
+
+    <script src="/js/checkout.js"></script>
+    <script src="/js/auth.js"></script>
+    <!-- <script src="/js/header.js"></script> -->
+</body>
+</html>

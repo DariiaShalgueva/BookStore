@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог книг</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Интернет-магазин книг</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/cart.html">Корзина</a>
+            <span id="auth-links">
+                <a href="/login.html">Войти</a>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Поиск по названию или автору">
+            <button onclick="searchBooks()">Поиск</button>
+            <select id="sort" onchange="sortBooks()">
+                <option value="default">Сортировка</option>
+                <option value="price-asc">По возрастанию цены</option>
+                <option value="price-desc">По убыванию цены</option>
+            </select>
+            <select id="filter" onchange="filterBooks()">
+                <option value="all">Все жанры</option>
+                <option value="Роман">Роман</option>
+                <option value="Научная фантастика">Научная фантастика</option>
+                <option value="Детектив">Детектив</option>
+            </select>
+            <button onclick="resetFilters()">Сбросить</button>
+        </div>
+        <div id="catalog" class="catalog">
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Интернет-магазин книг. Все права защищены.</p>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+
+</html>

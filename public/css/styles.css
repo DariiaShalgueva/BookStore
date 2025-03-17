@@ -1,0 +1,464 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* Стили для формы */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form .form-group {
+    margin-bottom: 15px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-form .submit-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.registration-form .submit-button:hover {
+    background-color: #555;
+}
+
+/* Стили для ссылок */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для страницы личного кабинета */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.order-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+}
+
+.order-card h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.order-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Выделение истории заказов */
+#orders-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#orders-info h3 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    margin-bottom: 2em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.catalog a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333; /* Устанавливаем цвет текста */
+    transition: color 0.3s ease; /* Добавляем плавный переход для цвета */
+}
+
+.catalog a:hover {
+    color: #007BFF; /* Цвет при наведении */
+}
+
+.catalog a:visited {
+    color: #333; /* Цвет после перехода */
+}
+
+/* Дополнительные стили для текста в карточках */
+.book-card h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.book-card p {
+    margin: 0.2em 0;
+    color: #555;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1em;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-summary {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.cart-summary button {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-summary button:hover {
+    background-color: #555;
+}
+
+
+.book-details {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 2em;
+}
+
+.book-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.book-info h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #222;
+}
+
+.book-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.book-info button {
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1em;
+}
+
+.book-info button:hover {
+    background-color: #555;
+}
+
+.profile-info, .orders-info {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form .form-section {
+    margin-bottom: 20px;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 15px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="password"],
+.checkout-form input[type="email"],
+.checkout-form textarea,
+.checkout-form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkout-form .submit-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.checkout-form .submit-button:hover {
+    background-color: #555;
+}
+
+#payment-details {
+    margin-top: 10px;
+}
+
+#order-details {
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Секция hero */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    margin-bottom: 40px;
+}
+
+.hero-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.cta-button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+
+/* Секция акций */
+.promotions {
+    padding: 20px;
+    background-color: #fafafa;
+    margin-bottom: 40px;
+}
+
+.promotions h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.promotion-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.promotion-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.promotion-item p {
+    color: #555;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .book-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-details img {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .book-info {
+        text-align: center;
+    }
+}

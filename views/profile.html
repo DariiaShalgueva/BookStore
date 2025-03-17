@@ -1,0 +1,45 @@
+<!-- views/profile.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Интернет-магазин книг</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/cart.html">Корзина</a>
+            <span id="auth-links">
+                <a href="/login.html">Войти</a>
+            </span>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <h2>Личный кабинет</h2>
+            <div id="profile-info" class="profile-section">
+                <!-- Информация о пользователе будет загружена здесь -->
+            </div>
+            <div id="orders-info" class="profile-section">
+                <h3>История заказов</h3>
+                <div id="orders-list">
+                    <!-- Заказы будут загружены здесь -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Интернет-магазин книг. Все права защищены.</p>
+    </footer>
+
+    <script src="/js/profile.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>
